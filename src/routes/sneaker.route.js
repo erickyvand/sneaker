@@ -1,7 +1,15 @@
 import express from 'express';
 import SneakerController from '../controllers/sneaker.controller';
-import { checkSneakerExists } from '../middlewares/sneaker.middleware';
-import { validateUrlParam } from '../validations/sneaker.validation';
+import {
+	checkCartExists,
+	checkPaymentExists,
+	checkSneakerExists,
+} from '../middlewares/sneaker.middleware';
+import {
+	validateCartUrlParam,
+	validatePaymentBody,
+	validateUrlParam,
+} from '../validations/sneaker.validation';
 
 const router = express.Router();
 
@@ -17,6 +25,20 @@ router.post(
 	validateUrlParam,
 	checkSneakerExists,
 	SneakerController.addToCart
+);
+router.get(
+	'/:cartId/cart',
+	validateCartUrlParam,
+	checkCartExists,
+	SneakerController.viewCart
+);
+router.post(
+	'/:cartId/pay',
+	validateCartUrlParam,
+	checkCartExists,
+	validatePaymentBody,
+	checkPaymentExists,
+	SneakerController.paySneaker
 );
 
 export default router;

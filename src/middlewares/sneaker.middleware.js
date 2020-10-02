@@ -1,4 +1,5 @@
 import CartService from '../services/cart.service';
+import PaymentService from '../services/payment.service';
 import ResponseService from '../services/response.service';
 import SneakerService from '../services/sneaker.service';
 
@@ -27,6 +28,28 @@ export async function checkSneakerExists(req, res, next) {
 
 	if (cart) {
 		ResponseService.setError(409, 'Cart already created');
+		return ResponseService.send(res);
+	}
+	next();
+}
+
+export async function checkCartExists(req, res, next) {
+	const cart = await CartService.findCart({ id: req.params.cartId });
+
+	if (!cart) {
+		ResponseService.setError(404, 'Cart does not exits');
+		return ResponseService.send(res);
+	}
+	next();
+}
+
+export async function checkPaymentExists(req, res, next) {
+	const payment = await PaymentService.findPayment({
+		cartId: req.params.cartId,
+	});
+
+	if (payment) {
+		ResponseService.setError(409, 'This Payment has been done');
 		return ResponseService.send(res);
 	}
 	next();
