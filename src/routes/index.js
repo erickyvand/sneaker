@@ -3,6 +3,6 @@ import SneakerRoute from './sneaker.route';
 
 const app = express();
 
-app.use('/sneakers', SneakerRoute);
+app.use('/api/sneakers', SneakerRoute);
 
 export default app;

@@ -1,6 +1,6 @@
 import models from '../database/models';
 
-const { Cart } = models;
+const { Cart, Sneaker } = models;
 
 class CartService {
 	static createCart(object) {
@@ -8,7 +8,7 @@ class CartService {
 	}
 
 	static findCart(attribute) {
-		return Cart.findOne({ where: attribute });
+		return Cart.findOne({ where: attribute, include: { model: Sneaker } });
 	}
 }
 
