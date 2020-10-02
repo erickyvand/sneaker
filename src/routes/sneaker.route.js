@@ -12,5 +12,11 @@ router.get(
 	checkSneakerExists,
 	SneakerController.viewSneaker
 );
+router.post(
+	'/:sneakerId/add/:size',
+	validateUrlParam,
+	checkSneakerExists,
+	SneakerController.addToCart
+);
 
 export default router;

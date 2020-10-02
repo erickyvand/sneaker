@@ -8,6 +8,11 @@ export const validateUrlParam = (req, res, next) => {
 			.messages({
 				'string.pattern.base': 'Id must be a number',
 			}),
+		size: Joi.string()
+			.regex(/^[0-9]{1,}$/)
+			.messages({
+				'string.pattern.base': 'Id must be a number',
+			}),
 	}).options({ abortEarly: false });
 
 	const { error } = schema.validate(req.params);
