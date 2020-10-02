@@ -7,6 +7,14 @@ class SneakerController {
 		ResponseService.setSuccess(200, 'List of latest sneakers', sneakers);
 		return ResponseService.send(res);
 	}
+
+	static async viewSneaker(req, res) {
+		const sneaker = await SneakerService.findSneaker({
+			id: req.params.sneakerId,
+		});
+		ResponseService.setSuccess(200, 'Selected Sneaker', sneaker);
+		return ResponseService.send(res);
+	}
 }
 
 export default SneakerController;
