@@ -3,7 +3,19 @@ import PaymentService from '../services/payment.service';
 import ResponseService from '../services/response.service';
 import SneakerService from '../services/sneaker.service';
 
-export async function checkSneakerExists(req, res, next) {
+export async function checkSneakerIdExists(req, res, next) {
+	const sneaker = await SneakerService.findSneaker({
+		id: req.params.sneakerId,
+	});
+
+	if (!sneaker) {
+		ResponseService.setError(404, 'Sneaker not found');
+		return ResponseService.send(res);
+	}
+	next();
+}
+
+export async function checkSneakerIdandSizeExists(req, res, next) {
 	const cart = await CartService.findCart({
 		cartId: `${req.params.sneakerId}${req.params.size}`,
 	});
@@ -12,14 +24,14 @@ export async function checkSneakerExists(req, res, next) {
 		id: req.params.sneakerId,
 	});
 
-	const sneakerSize = sneaker.Descriptions.find(
-		s => s.size === parseInt(req.params.size)
-	);
-
 	if (!sneaker) {
 		ResponseService.setError(404, 'Sneaker not found');
 		return ResponseService.send(res);
 	}
+
+	const sneakerSize = sneaker.Descriptions.find(
+		s => s.size === parseInt(req.params.size)
+	);
 
 	if (!sneakerSize) {
 		ResponseService.setError(404, 'Sneaker size not found');

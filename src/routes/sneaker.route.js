@@ -3,7 +3,8 @@ import SneakerController from '../controllers/sneaker.controller';
 import {
 	checkCartExists,
 	checkPaymentExists,
-	checkSneakerExists,
+	checkSneakerIdandSizeExists,
+	checkSneakerIdExists,
 } from '../middlewares/sneaker.middleware';
 import {
 	validateCartUrlParam,
@@ -17,13 +18,13 @@ router.get('/', SneakerController.viewSneakers);
 router.get(
 	'/:sneakerId',
 	validateUrlParam,
-	checkSneakerExists,
+	checkSneakerIdExists,
 	SneakerController.viewSneaker
 );
 router.post(
 	'/:sneakerId/add/:size',
 	validateUrlParam,
-	checkSneakerExists,
+	checkSneakerIdandSizeExists,
 	SneakerController.addToCart
 );
 router.get(
