@@ -1,2 +1,2 @@
 service_name: travis-pro
-repo_token: ${process.env.REPO_TOKEN}
+repo_token: ShNzob0OkjqnTqP3JmrsRms1EsxFQeMcL

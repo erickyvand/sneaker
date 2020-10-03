@@ -8,6 +8,7 @@ module.exports = {
 				{
 					sneakerId: 13,
 					size: 45,
+					price: 30000,
 					quantity: 10,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -15,6 +16,7 @@ module.exports = {
 				{
 					sneakerId: 13,
 					size: 39,
+					price: 25000,
 					quantity: 20,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -22,6 +24,7 @@ module.exports = {
 				{
 					sneakerId: 13,
 					size: 47,
+					price: 35000,
 					quantity: 13,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -29,6 +32,7 @@ module.exports = {
 				{
 					sneakerId: 13,
 					size: 35,
+					price: 20000,
 					quantity: 5,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -36,13 +40,7 @@ module.exports = {
 				{
 					sneakerId: 12,
 					size: 14,
-					quantity: 8,
-					createdAt: new Date(),
-					updatedAt: new Date(),
-				},
-				{
-					sneakerId: 12,
-					size: 14,
+					price: 10000,
 					quantity: 8,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -50,6 +48,15 @@ module.exports = {
 				{
 					sneakerId: 12,
 					size: 24,
+					price: 13000,
+					quantity: 8,
+					createdAt: new Date(),
+					updatedAt: new Date(),
+				},
+				{
+					sneakerId: 12,
+					size: 30,
+					price: 17000,
 					quantity: 4,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -57,6 +64,7 @@ module.exports = {
 				{
 					sneakerId: 12,
 					size: 40,
+					price: 25000,
 					quantity: 18,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -64,27 +72,31 @@ module.exports = {
 				{
 					sneakerId: 12,
 					size: 43,
+					price: 25000,
 					quantity: 10,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
-					sneakerId: 10,
+					sneakerId: 11,
 					size: 45,
+					price: 32000,
 					quantity: 11,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
-					sneakerId: 10,
+					sneakerId: 11,
 					size: 41,
+					price: 30000,
 					quantity: 24,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
-					sneakerId: 10,
+					sneakerId: 11,
 					size: 42,
+					price: 31000,
 					quantity: 26,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -92,6 +104,7 @@ module.exports = {
 				{
 					sneakerId: 4,
 					size: 42,
+					price: 20000,
 					quantity: 26,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -99,6 +112,7 @@ module.exports = {
 				{
 					sneakerId: 4,
 					size: 46,
+					price: 23000,
 					quantity: 21,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -106,6 +120,7 @@ module.exports = {
 				{
 					sneakerId: 4,
 					size: 41,
+					price: 18000,
 					quantity: 26,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -113,6 +128,7 @@ module.exports = {
 				{
 					sneakerId: 4,
 					size: 38,
+					price: 14000,
 					quantity: 40,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -120,6 +136,7 @@ module.exports = {
 				{
 					sneakerId: 5,
 					size: 36,
+					price: 9000,
 					quantity: 39,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -127,6 +144,7 @@ module.exports = {
 				{
 					sneakerId: 5,
 					size: 25,
+					price: 5000,
 					quantity: 3,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -134,6 +152,7 @@ module.exports = {
 				{
 					sneakerId: 5,
 					size: 35,
+					price: 7000,
 					quantity: 14,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -141,6 +160,7 @@ module.exports = {
 				{
 					sneakerId: 5,
 					size: 38,
+					price: 8000,
 					quantity: 23,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -148,6 +168,7 @@ module.exports = {
 				{
 					sneakerId: 5,
 					size: 44,
+					price: 1000,
 					quantity: 43,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -155,6 +176,7 @@ module.exports = {
 				{
 					sneakerId: 6,
 					size: 22,
+					price: 4000,
 					quantity: 9,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -162,6 +184,7 @@ module.exports = {
 				{
 					sneakerId: 6,
 					size: 32,
+					price: 7000,
 					quantity: 20,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -169,6 +192,7 @@ module.exports = {
 				{
 					sneakerId: 7,
 					size: 42,
+					price: 13000,
 					quantity: 33,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -176,6 +200,7 @@ module.exports = {
 				{
 					sneakerId: 8,
 					size: 41,
+					price: 14000,
 					quantity: 25,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -183,6 +208,7 @@ module.exports = {
 				{
 					sneakerId: 8,
 					size: 40,
+					price: 12000,
 					quantity: 21,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -190,6 +216,7 @@ module.exports = {
 				{
 					sneakerId: 8,
 					size: 36,
+					price: 9000,
 					quantity: 25,
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -197,27 +224,31 @@ module.exports = {
 				{
 					sneakerId: 9,
 					size: 32,
+					price: 6000,
 					quantity: 2,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
 					sneakerId: 9,
-					size: 32,
+					size: 42,
+					price: 10000,
 					quantity: 2,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
-					sneakerId: 14,
+					sneakerId: 3,
 					size: 45,
+					price: 15000,
 					quantity: 12,
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},
 				{
-					sneakerId: 14,
+					sneakerId: 3,
 					size: 46,
+					price: 17000,
 					quantity: 31,
 					createdAt: new Date(),
 					updatedAt: new Date(),

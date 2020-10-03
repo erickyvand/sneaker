@@ -27,19 +27,12 @@ router.post(
 	checkSneakerIdandSizeExists,
 	SneakerController.addToCart
 );
+router.get('/cart/view', SneakerController.viewAllCarts);
 router.get(
 	'/:cartId/cart',
 	validateCartUrlParam,
 	checkCartExists,
 	SneakerController.viewCart
-);
-router.post(
-	'/:cartId/pay',
-	validateCartUrlParam,
-	checkCartExists,
-	validatePaymentBody,
-	checkPaymentExists,
-	SneakerController.paySneaker
 );
 
 export default router;

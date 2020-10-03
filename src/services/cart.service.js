@@ -10,6 +10,10 @@ class CartService {
 	static findCart(attribute) {
 		return Cart.findOne({ where: attribute, include: { model: Sneaker } });
 	}
+
+	static findCarts() {
+		return Cart.findAll({ include: { model: Sneaker } });
+	}
 }
 
 export default CartService;

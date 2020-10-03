@@ -10,6 +10,10 @@ class PaymentService {
 	static findPayment(attributes) {
 		return Payment.findOne({ where: attributes });
 	}
+
+	static updatePayment(id, property) {
+		return Payment.update(property, { where: id, returning: true });
+	}
 }
 
 export default PaymentService;

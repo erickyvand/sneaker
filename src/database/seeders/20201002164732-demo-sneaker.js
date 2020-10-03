@@ -8,7 +8,6 @@ module.exports = {
 				{
 					brandName: 'Nike',
 					model: 'Jordan',
-					price: '20000',
 					picture: 'jordan.jpeg',
 					releaseDate: '1990-08-12 14:53:14.924+02',
 					createdAt: new Date(),
@@ -17,7 +16,6 @@ module.exports = {
 				{
 					brandName: 'Nike',
 					model: 'Hundred',
-					price: '15000',
 					picture: 'hundred.jpeg',
 					releaseDate: '1985-10-02 15:53:32.924+02',
 					createdAt: new Date(),
@@ -26,7 +24,6 @@ module.exports = {
 				{
 					brandName: 'Fila',
 					model: 'Disruptor',
-					price: '10000',
 					picture: 'disruptor.jpeg',
 					releaseDate: '1995-06-03 18:33:45.924+02',
 					createdAt: new Date(),
@@ -35,7 +32,6 @@ module.exports = {
 				{
 					brandName: 'All Star',
 					model: 'DH',
-					price: '13000',
 					picture: 'dh.jpeg',
 					releaseDate: '1998-04-11 20:42:50.924+02',
 					createdAt: new Date(),
@@ -44,7 +40,6 @@ module.exports = {
 				{
 					brandName: 'Rock',
 					model: 'Rockfield',
-					price: '17000',
 					picture: 'rockfield.jpeg',
 					releaseDate: '2000-05-12 21:00:21.924+02',
 					createdAt: new Date(),
@@ -53,7 +48,6 @@ module.exports = {
 				{
 					brandName: 'Mango',
 					model: 'Magnolia',
-					price: '21000',
 					picture: 'magnolia.jpeg',
 					releaseDate: '2005-01-02 11:10:20.924+02',
 					createdAt: new Date(),
@@ -62,8 +56,7 @@ module.exports = {
 				{
 					brandName: 'Addidas',
 					model: 'Cortege',
-					price: '19000',
-					picture: 'cortege.jpeg',
+					picture: 'laceup.jpeg',
 					releaseDate: '2003-07-09 14:19:25.924+02',
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -71,7 +64,6 @@ module.exports = {
 				{
 					brandName: 'Fab DC',
 					model: 'Fabric',
-					price: '19000',
 					picture: 'fabric.jpeg',
 					releaseDate: '2004-08-02 15:18:30.924+02',
 					createdAt: new Date(),
@@ -80,7 +72,6 @@ module.exports = {
 				{
 					brandName: 'Puma',
 					model: 'Fast',
-					price: '9000',
 					picture: 'fast.jpeg',
 					releaseDate: '2001-02-02 17:19:30.924+02',
 					createdAt: new Date(),
@@ -89,7 +80,6 @@ module.exports = {
 				{
 					brandName: 'Bale',
 					model: 'Balenciaga',
-					price: '8000',
 					picture: 'fast.jpeg',
 					releaseDate: '1987-10-24 12:20:31.924+02',
 					createdAt: new Date(),
@@ -98,7 +88,6 @@ module.exports = {
 				{
 					brandName: 'Addidas',
 					model: 'Lauren',
-					price: '15000',
 					picture: 'lauren.jpeg',
 					releaseDate: '1997-11-29 04:21:36.924+02',
 					createdAt: new Date(),
@@ -107,7 +96,6 @@ module.exports = {
 				{
 					brandName: 'Nike',
 					model: 'White',
-					price: '11000',
 					picture: 'white.jpeg',
 					releaseDate: '1996-09-22 06:41:39.924+02',
 					createdAt: new Date(),
@@ -116,8 +104,7 @@ module.exports = {
 				{
 					brandName: 'Bucci',
 					model: 'Bacca Bucci',
-					price: '18000',
-					picture: 'baccabucci.jpg',
+					picture: 'baccabuci.jpg',
 					releaseDate: '2004-04-21 07:35:34.924+02',
 					createdAt: new Date(),
 					updatedAt: new Date(),

@@ -19,6 +19,20 @@ describe('/GET sneakers', () => {
 	});
 });
 
+describe('/GET descriptions', () => {
+	it('Should view list descriptions', done => {
+		chai
+			.request(app)
+			.get('/api/descriptions')
+			.end((err, res) => {
+				res.body.should.be.an('object');
+				res.status.should.be.equal(200);
+				res.body.should.have.property('message');
+				done();
+			});
+	});
+});
+
 describe('/GET select sneaker', () => {
 	it('Should be able to select a sneaker to view size availabilty', done => {
 		chai
@@ -120,6 +134,18 @@ describe('/POST add to cart', () => {
 });
 
 describe('/GET view cart', () => {
+	it('Should be able to view all carts', done => {
+		chai
+			.request(app)
+			.get('/api/sneakers/cart/view')
+			.end((err, res) => {
+				res.body.should.be.an('object');
+				res.status.should.be.equal(200);
+				res.body.should.have.property('message');
+				done();
+			});
+	});
+
 	it('Should be able to view cart', done => {
 		chai
 			.request(app)
@@ -164,7 +190,7 @@ describe('/POST payment', () => {
 		};
 		chai
 			.request(app)
-			.post('/api/sneakers/1/pay')
+			.post('/api/payments/1')
 			.send(data)
 			.end((err, res) => {
 				res.body.should.be.an('object');
@@ -177,7 +203,7 @@ describe('/POST payment', () => {
 	it('Should validate url param', done => {
 		chai
 			.request(app)
-			.post('/api/sneakers/1g/pay')
+			.post('/api/payments/1n')
 			.end((err, res) => {
 				res.body.should.be.an('object');
 				res.status.should.be.equal(400);
@@ -189,7 +215,7 @@ describe('/POST payment', () => {
 	it('Should check if the cart id exists', done => {
 		chai
 			.request(app)
-			.post('/api/sneakers/99/pay')
+			.post('/api/payments/99')
 			.end((err, res) => {
 				res.body.should.be.an('object');
 				res.status.should.be.equal(404);
@@ -204,7 +230,7 @@ describe('/POST payment', () => {
 		};
 		chai
 			.request(app)
-			.post('/api/sneakers/1/pay')
+			.post('/api/payments/1')
 			.send(data)
 			.end((err, res) => {
 				res.body.should.be.an('object');
@@ -212,15 +238,15 @@ describe('/POST payment', () => {
 				res.body.should.have.property('message');
 				done();
 			});
-  });
-  
-  it('Should the check if the payment has been done before', done => {
+	});
+
+	it('Should the check if the payment has been done before', done => {
 		const data = {
 			cardNumber: '58374958',
 		};
 		chai
 			.request(app)
-			.post('/api/sneakers/1/pay')
+			.post('/api/payments/1')
 			.send(data)
 			.end((err, res) => {
 				res.body.should.be.an('object');
@@ -230,3 +256,17 @@ describe('/POST payment', () => {
 			});
 	});
 });
+
+describe('/GET payment', () => {
+	it('Should get specific payment', done => {
+		chai
+			.request(app)
+			.get('/api/payments/1/payment')
+			.end((err, res) => {
+				res.body.should.be.an('object');
+				res.status.should.be.equal(200);
+				res.body.should.have.property('message');
+				done();
+			});
+	});
+})

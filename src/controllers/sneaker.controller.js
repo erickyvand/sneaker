@@ -1,4 +1,5 @@
 import CartService from '../services/cart.service';
+import DescriptionService from '../services/description.service';
 import PaymentService from '../services/payment.service';
 import ResponseService from '../services/response.service';
 import SneakerService from '../services/sneaker.service';
@@ -28,6 +29,12 @@ class SneakerController {
 		return ResponseService.send(res);
 	}
 
+	static async viewAllCarts(req, res) {
+		const carts = await CartService.findCarts();
+		ResponseService.setSuccess(200, 'View All Carts', carts);
+		return ResponseService.send(res);
+	}
+
 	static async viewCart(req, res) {
 		const cart = await CartService.findCart({ id: req.params.cartId });
 		ResponseService.setSuccess(200, 'Selected cart', cart);
@@ -36,17 +43,38 @@ class SneakerController {
 
 	static async paySneaker(req, res) {
 		const cart = await CartService.findCart({ id: req.params.cartId });
+		const description = await DescriptionService.findDescription({
+			sneakerId: cart.sneakerId,
+		});
 
-		const payment = await PaymentService.createPayment({
+		await PaymentService.createPayment({
 			cartId: req.params.cartId,
-			amount: cart.Sneaker.price,
+			amount: description.price,
 			cardNumber: req.body.cardNumber,
 		});
+		await PaymentService.updatePayment(
+			{ id: req.params.cartId },
+			{ isPaid: true }
+		);
+
+		const payment = await PaymentService.findPayment({ id: req.params.cartId });
 		ResponseService.setSuccess(
 			201,
 			'Your payment has been done sucssfully',
 			payment
 		);
+		return ResponseService.send(res);
+	}
+
+	static async getspecificPayment(req, res) {
+		const payment = await PaymentService.findPayment({ id: req.params.cartId });
+		ResponseService.setSuccess(200, 'Payment for this cart', payment);
+		return ResponseService.send(res);
+	}
+
+	static async viewSneakersDescriptions(req, res) {
+		const descriptions = await DescriptionService.findDescriptions();
+		ResponseService.setSuccess(200, 'All descriptions', descriptions);
 		return ResponseService.send(res);
 	}
 }

@@ -14,6 +14,9 @@ module.exports = {
       size: {
         type: Sequelize.INTEGER
       },
+      price: {
+        type: Sequelize.DOUBLE
+      },
       quantity: {
         type: Sequelize.INTEGER
       },

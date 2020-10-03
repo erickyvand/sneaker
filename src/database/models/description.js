@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 		{
 			sneakerId: DataTypes.INTEGER,
 			size: DataTypes.INTEGER,
+			price: DataTypes.DOUBLE,
 			quantity: DataTypes.INTEGER,
 		},
 		{
